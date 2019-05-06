@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args){
 
         npcName("while yelling extremely loudly at you, steve job says");
-        boxString("hello welcome to ok devious!");
+        boxString("hello welcome to ok devious! Grab em by the legs");
 
 
     }
