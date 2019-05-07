@@ -1,12 +1,16 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args){
 
-        loadScreen();
+        //loadScreen();
         int userChoice;
 
         Scanner input = new Scanner(System.in);
+        List<String> inv = new ArrayList<String>();
+
 
         System.out.println("you went north from shipwreck cove and find the carnage of your much loved ship.");
         System.out.println("what would you like to do?");
@@ -16,12 +20,27 @@ public class Main {
 
         if (userChoice == 1){
             hpBar();
+            for (int i = 1; i<=10; i++) {
+                a3menu();
+            }
         }else if (userChoice == 2){
             b3menu();
         }else if (userChoice == 3){
             a3content();
         }
 
+        userChoice = a3amenu();
+
+        System.out.println("The armour was added to your inventory");
+        if (userChoice == 1){
+            inv.add("rusty armour");
+            System.out.println("Inventory: ");
+            System.out.println(inv);
+            a3a1menu();
+
+        }else if (userChoice == 2){
+            b3menu();
+        }
 
 
 
@@ -138,7 +157,7 @@ public class Main {
         int selectionA3;
         Scanner inputA3 = new Scanner(System.in);
         System.out.println("enter 1 to show current HP");
-        System.out.println("enter 2 to go west");
+        System.out.println("enter 2 to go East");
         System.out.println("enter 3 to search the shipwreck ruins");
 
         selectionA3 = inputA3.nextInt();
@@ -154,7 +173,9 @@ public class Main {
     }
 
     public static void b3menu(){
-        System.out.println("test");
+        System.out.println("as you reach the top of the hill, you see a never ending span of trees");
+        System.out.println("you notice that there is only 1 road, leading south and north");
+        System.out.println("where do you want to go?");
     }
 
     public static int a3amenu(){
@@ -167,6 +188,17 @@ public class Main {
         selectionA3a = inputA3a.nextInt();
         return selectionA3a;
 
+    }
+
+    public static int a3a1menu(){
+        int selectionA3a1;
+        Scanner inputA$a1 = new Scanner(System.in);
+        System.out.println("What would you like to do?");
+        System.out.println("enter 1 to go east");
+        System.out.println("enter 2 to go south");
+
+        selectionA3a1 = inputA$a1.nextInt();
+        return selectionA3a1;
     }
 }
 
