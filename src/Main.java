@@ -3,15 +3,33 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
-        //loadScreen();
+        loadScreen();
         int userChoice;
 
         Scanner input = new Scanner(System.in);
-        userChoice = menu();
+
+        System.out.println("you went north from shipwreck cove and find the carnage of your much loved ship.");
+        System.out.println("what would you like to do?");
+        System.out.println();
+
+        userChoice = a3menu();
 
         if (userChoice == 1){
             hpBar();
+        }else if (userChoice == 2){
+            b3menu();
+        }else if (userChoice == 3){
+            a3content();
         }
+
+
+
+
+  //      if (userChoice == 1){
+       //     hpBar();
+        //}else if (userChoice == 2){
+
+       // }
 
 
 
@@ -108,12 +126,48 @@ public class Main {
         System.out.println("choose what you want to do:");
         System.out.println("--------------------------\n");
         System.out.println("enter 1 to show current HP");
+        System.out.println("enter 2 to go west");
 
         selection = input.nextInt();
         return selection;
 
     }
 
+    public static int a3menu(){
+
+        int selectionA3;
+        Scanner inputA3 = new Scanner(System.in);
+        System.out.println("enter 1 to show current HP");
+        System.out.println("enter 2 to go west");
+        System.out.println("enter 3 to search the shipwreck ruins");
+
+        selectionA3 = inputA3.nextInt();
+        return selectionA3;
+    }
+
+    public static void a3content(){
+        System.out.println("you searched the ruins and find some rusty armour");
+        System.out.println("what would you like to do?");
+
+        a3amenu();
+
+    }
+
+    public static void b3menu(){
+        System.out.println("test");
+    }
+
+    public static int a3amenu(){
+
+        int selectionA3a;
+        Scanner inputA3a = new Scanner(System.in);
+        System.out.println("enter 1 to equip armour");
+        System.out.println("enter 2 to go east");
+
+        selectionA3a = inputA3a.nextInt();
+        return selectionA3a;
+
+    }
 }
 
 
