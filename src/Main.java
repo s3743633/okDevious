@@ -53,7 +53,29 @@ public class Main {
 
         System.out.println("Loading completed!!");
 
+        try {
+
+
+            for (int i = 1; i <= 1; i++) {
+
+                Thread.sleep(1000);
+                System.out.println("*******************************************************************************************");
+                System.out.println();
+                System.out.println("      ******     *     *      ****    *****  *       *  ***  ******   *    *  ****         ");
+                System.out.println("     *      *    *   *        *   *   *       *     *    *  *      *  *    *  *            ");
+                System.out.println("     *      *    * *          *    *  *****    *   *     *  *      *  *    *  ****         ");
+                System.out.println("     *      *    *   *        *   *   *         * *      *  *      *  *    *     *         ");
+                System.out.println("      ******     *     *      ****    *****      *      ***  ******   ******  ****         ");
+                System.out.println();
+                System.out.println("*******************************************************************************************");
+            }
+        }
+        catch(Exception e){
+        }
     }
+
+
+
 
 }
 
